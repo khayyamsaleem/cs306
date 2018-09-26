@@ -1,0 +1,12 @@
+COMMAND: java SymmetricKeyTest RC2 64 ECB 100000 I am a superstar
+
+--------------------
+
+COMMAND: java SymmetricKeyTest RC2 512 ECB 100000 I am a superstar
+
+--------------------
+
+COMMAND: java SymmetricKeyTest RC2 1024 ECB 100000 I am a superstar
+
+--------------------
+

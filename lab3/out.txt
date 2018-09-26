@@ -1,0 +1,75 @@
+COMMAND: java SymmetricKeyTest DES 56 ECB 100000 I am a superstar
+
+SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+Generating IV using NativePRNG
+Generating DES key (56 bits)
+
+Simulation run 100000 times
+Average encryption time: 0.121218165 microseconds
+Average decryption time: 0.117460502 microseconds
+
+Input message: I am a superstar
+Encrypted message: ��KA9�ߘ�d�p8�pnϭ�^�
+Decrypted message: I am a superstar
+--------------------
+
+COMMAND: java SymmetricKeyTest TripleDES 112 ECB 100000 I am a superstar
+
+SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+Generating IV using NativePRNG
+Generating TripleDES key (112 bits)
+
+Simulation run 100000 times
+Average encryption time: 0.231018544 microseconds
+Average decryption time: 0.235493901 microseconds
+
+Input message: I am a superstar
+Encrypted message: �K"��$�����m2���2G�
+Decrypted message: I am a superstar
+--------------------
+
+COMMAND: java SymmetricKeyTest RC2 40 ECB 100000 I am a superstar
+
+SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+Generating IV using NativePRNG
+Generating RC2 key (40 bits)
+
+Simulation run 100000 times
+Average encryption time: 0.156245907 microseconds
+Average decryption time: 0.14865142 microseconds
+
+Input message: I am a superstar
+Encrypted message: �p��wPmsA��jE%��N�q���-
+Decrypted message: I am a superstar
+--------------------
+
+COMMAND: java SymmetricKeyTest AES 128 ECB 100000 I am a superstar
+
+SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+Generating IV using NativePRNG
+Generating AES key (128 bits)
+
+Simulation run 100000 times
+Average encryption time: 0.046323885 microseconds
+Average decryption time: 0.050922225 microseconds
+
+Input message: I am a superstar
+Encrypted message: �X��o,�E{Z���8F��\���?dL5�#z�c
+Decrypted message: I am a superstar
+--------------------
+
+COMMAND: java SymmetricKeyTest Blowfish 32 ECB 100000 I am a superstar
+
+SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+Generating IV using NativePRNG
+Generating Blowfish key (32 bits)
+
+Simulation run 100000 times
+Average encryption time: 3.712859061 microseconds
+Average decryption time: 3.718322083 microseconds
+
+Input message: I am a superstar
+Encrypted message: �<Fbd) �k,E]�f��ƁK�
+Decrypted message: I am a superstar
+--------------------
+

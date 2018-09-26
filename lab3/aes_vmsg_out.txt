@@ -1,0 +1,12 @@
+COMMAND: java SymmetricKeyTest AES 128 ECB 100000 I am a superstar
+
+--------------------
+
+COMMAND: java SymmetricKeyTest AES 128 ECB 100000 c
+
+--------------------
+
+COMMAND: java SymmetricKeyTest AES 128 ECB 100000 9428urho1icu3bo123itybo23giybv2o4uybgo2uyrbfo2fyb2o4fuyb
+
+--------------------
+
