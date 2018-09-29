@@ -28,7 +28,7 @@
 1) The strategy I employed was crib-dragging. Essentially, I computed the XOR of the first two ciphertexts, then I "dragged" a ~lambda x: x^codecs.encode(guess_word, "hex")~ function over windows of length ~len(guess_word)~ across the XOR of ciphertexts, waiting to see if a probable plaintext could be yielded. Then, after enough guess words, I was able to yield a single plaintext,ciphertext pair, and then XOR'd them together to yield the key. This process of guessing enough words was the most difficult part. Then, I mapped a ~lambda x: x^key~ over the rest of the ciphertexts to yield the hex-encoded plaintexts, and converted those to ascii to yield the English plaintexts. The tools I employed are available [[http://travisdazell.blogspot.com/2012/11/many-time-pad-attack-crib-drag.html][here]], [[https://www.asciitohex.com/][here]], [[https://github.com/SpiderLabs/cribdrag][here]], and [[https://toolbox.lotusfa.com/crib_drag/][here]], as well as the source detailed below with results pasted in from the other sources. There is no centralized script. I apologize.
     #+BEGIN_SRC python :exports none
     import codecs
-    search = list(map(lambda x: strxor(x, codecs.endcode("Nikos", 'hex'))))
+    search = list(map(lambda x: strxor(x, codecs.encode("Nikos", 'hex'))))
     key = codecs.encode("youfoundthekey!congratulations!!!", "hex")
     out = list(map(lambda x: codecs.decode(strxor(x, key), "hex")))
     #+END_SRC
