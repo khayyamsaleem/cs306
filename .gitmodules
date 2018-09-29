@@ -1,0 +1,3 @@
+[submodule "hw1/cribdrag"]
+	path = hw1/cribdrag
+	url = https://github.com/SpiderLabs/cribdrag
