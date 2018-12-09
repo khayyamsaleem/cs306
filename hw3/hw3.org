@@ -28,3 +28,6 @@
 1) Eve can continue to adjust her answers and re-hash her assignment until her hash matches the hash of someone else's assignment. If the other student answered questions correctly after studying properly, Eve could get a perfect grade that matches the other student. Given that she did not study and the rest of the class did, this strategy will increase her chances of getting a better grade.
 2) This proposal will make the information more secure because it is encrypted, but does not affect deduplication; it will neither increase nor decrease costs. Because plain RSA is deterministic, the same files will have the same encrypted values, and yield the same hash digests post-encryption. Hence, the proposal has the same problem as arose when uploading the files and hashing them directly. It has no effect on deduplication.
 3) Because El-Gamal is non-deterministic, the file can be encrypted to a new, random ciphertext encoding. Hence, the benefits of deduplication are lost, because hashing the encrypted files will reduce the likelihood that two files, even if they are the same, will hash to the same digest. Deduplication will not be able to be leveraged.
+
+----------
+I pledge my honor that I have abided by the Stevens Honor System.
