@@ -1,6 +1,6 @@
 #+STARTUP: noindent showall
 #+TITLE: Homework #3
-#+SUBTITLE: Introduction to IT Security
+#+SUBTITLE: CS306 -- Introduction to IT Security -- Fall 2018
 #+OPTIONS: toc:nil date:nil num:nil
 #+LaTeX_HEADER: \usepackage[1.0in]{geometry}
 
