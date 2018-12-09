@@ -1,0 +1,18 @@
+#+TITLE: Homework #3
+#+SUBTITLE: Introduction to IT Security
+#+OPTIONS: toc:nil date:nil num:nil
+#+LaTeX_HEADER: \usepackage[1.0in]{geometry}
+
+* Problem 1: Can you crack a password?
+1) Eve can use a *dictionary attack* to crack Alice's password, by attempting to pick it from a list of options that are likely to work (a rainbow table). Since SHA-1 and SHA-256 are popular hashing schemes, many lookup tables with common passwords are likely to exist, especially when we can explicitly filter for only words of 10 characters in length, all capitalized. If she doesn't have access to a lookup table as described, she can instead hash all passwords in the domain of possible passwords and wait to verify what password yields a matching hash (brute force).
+2) A salt appends characters to the password before it is hashed, so that typical password guesses and rainbow tables are weakened as an attack mechanism. It will also ensure that if two users have the same password, the compromise of one of the passwords does not yield the compromise of the other, nor does it compromise the password on any other platforms. However, it is not likely to slow down Eve's attack, as she already had access to the server and the salts were stored in plaintext,so Eve knew of the salts at the time the passwords were hashed.
+3) She can employ a birthday attack, selecting /k/ distinct randomly selected passwords to hash. Because of the birthday paradox, it will take significantly less time to crack the password. However, since rather than searching for collisions, she's searching for one specific password, the birthday attack may not be as effective as brute-forcing.
+
+* Problem 2
+1) Honeywords create an extra layer of protection over traditional password storage. The strategy introduces "decoy" passwords, so that even if an attacker compromises a password server, they are still tasked with deciphering which of /k/ passwords corresponds to the user's actual password. If they select one of the decoy passwords, the system will be alerted that there is a potential compromise underway.
+2) =password, pa$$werd, pa$$w0rd!, pa$$word!, pa$$w0Rd3, pas$word9, p_s_w0r_4, password6, 123pa$$word, pa$$w0rd0=
+3) The password I would select is *Blink-182*, as it is most similar to Blink-000, Blink!@*)123, and Blink-42379242235, and is an a popular band, making it a likely password. It would make sense then that the other honeywords are just modifications of this password, as they have no real-world representation, but Blink-182 does. The other passwords are simply unlikely, as they are long and complex, making them difficult to remember for the average user.
+   
+* Problem 3
+1) Eve can work with Mallory to store Bob's _old_ public key somewhere where Eve can access it. This way, whenever someone asks Mallory for Bob's public key, Mallory can provide Bob's old public key rather than the new one he generates. Eve still has the secret key that corresponds to the old public key, so she can decrypt the message, read its contents, and then encrypt the message with Bob's _new_ public key from Mallory, in the new Public-Key directory. Eve can then send the message to Bob, completing the *man-in-the-middle* attack.
+
